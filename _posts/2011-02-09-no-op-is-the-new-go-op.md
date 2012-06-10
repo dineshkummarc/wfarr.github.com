@@ -13,27 +13,23 @@ What this means is that if your changes would change the content of a config fil
 
 This support is available in the newer version of Moonshine, so you can call it in your deploy:
 
-``` shell
-cap production noop deploy
-```
+    cap production noop deploy
 
 But there is a catch!
 
 If you have any cap callbacks that are called as part of the deploy process, you'll need to make them no-op friendly. You can do that by doing something like so:
 
-``` ruby
-after 'deploy:restart', 'god:restart'
-    
-namespace :god do
-  task :restart do
-    if fetch(:noop)
-      puts "Not restarting god since this is a no-op!"
-    else
-      sudo 'restart god'
+    after 'deploy:restart', 'god:restart'
+        
+    namespace :god do
+      task :restart do
+        if fetch(:noop)
+          puts "Not restarting god since this is a no-op!"
+        else
+          sudo 'restart god'
+        end
+      end
     end
-  end
-end
-```
 
 Now you're ready to start doing a safe run of your deploys before shipping it!
 
