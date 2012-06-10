@@ -1,0 +1,46 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+// add some space for the header area
+
+.container-fluid {
+  margin-top: 20px;
+}
+
+// fix width of content area
+
+// blackify black things
+
+.black {
+  color: #404040;
+  &:hover {
+    color: #404040;
+  }
+  &:visited {
+    color: #404040;
+  }
+  &:hover:visited {
+    color: #404040;
+  }
+}
+
+.no-underline {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1 small {
+  float: right;
+}
+
+.post_tags {
+  margin-bottom: 1em;
+}
+
+h1 {
+  margin-bottom: 0.2em;
+}

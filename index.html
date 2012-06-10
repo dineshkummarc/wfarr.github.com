@@ -1,0 +1,16 @@
+---
+layout: default
+title: Will Farrington
+---
+
+<section>
+  <h1>Recent Blog Posts</h1>
+  <table class="table table-bordered table-striped">
+    {% for post in site.posts %}
+      <tr>
+        <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+        <td>{{ post.date | date_to_string }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</section>
