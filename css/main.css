@@ -3,34 +3,16 @@ body {
   font-size: 13px;
 }
 
-// add some space for the header area
-
 .container-fluid {
   margin-top: 20px;
 }
 
-// fix width of content area
-
-// blackify black things
-
-.black {
+.black, .black:hover, .black:visited, .black:hover:visited {
   color: #404040;
-  &:hover {
-    color: #404040;
-  }
-  &:visited {
-    color: #404040;
-  }
-  &:hover:visited {
-    color: #404040;
-  }
 }
 
-.no-underline {
+.no-underline, .no-underline:hover {
   text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 h1 small {
@@ -43,4 +25,9 @@ h1 small {
 
 h1 {
   margin-bottom: 0.2em;
+}
+
+.sidebar {
+  float: center;
+  text-align: center;
 }

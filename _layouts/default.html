@@ -7,7 +7,7 @@
     <meta name="author" content="Will Farrington" />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="/css/main.css" type="text/css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -16,17 +16,15 @@
          {% include sidebar.html %}
         </div>
         <div class="span9">
+          {{ content }}
         </div>
       </div>
     </div>
     <div class="clearfix">&nbsp;</div>
-    <footer>
-      <p>All content &copy; Will Farrington 2012</p>
-    </footer>
 
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
     {% include gauges.js %}
-    </script> -->
+    </script>
 
   </body>
 </html>
